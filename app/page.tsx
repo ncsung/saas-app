@@ -2,6 +2,7 @@ import CompanionCard from '@/components/CompanionCard'
 import CompanionsList from '@/components/CompanionsList'
 import Cta from '@/components/Cta'
 import { Button } from '@/components/ui/button'
+import { recentSessions } from '@/constants'
 import React from 'react'
 
 const Page = () => {
@@ -35,7 +36,11 @@ const Page = () => {
           />
         </section>
         <section className='home-section'>
-          <CompanionsList/>
+          <CompanionsList 
+            title = "Recently Completed"
+            companions={recentSessions}
+            classNames="w-2/3 max-lg:w-full"
+            />
           <Cta/>
         </section>
       </main>
