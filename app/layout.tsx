@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/NavBar";
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   description: "Real-time AI Teaching Platform",
 };
 
+// this embededs specific components in the layout constant throughout the app
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -19,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${bricolage.variable} antialiased`}>{children}</body>
+      <body className={`${bricolage.variable} antialiased`}>
+        <NavBar/>
+        {children}</body>
     </html>
   );
 }
