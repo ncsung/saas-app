@@ -1,0 +1,1 @@
+NextJS has file based routing - meaning that it will route to the folder in the app folder based on the url endpoint and render the page.tsx file in that folder.
